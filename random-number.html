@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="random-number">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `random-number`
+     * Generate a random number
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class RandomNumber extends Polymer.Element {
+      static get is() { return 'random-number'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'random-number'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(RandomNumber.is, RandomNumber);
+  </script>
+</dom-module>
