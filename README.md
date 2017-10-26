@@ -7,7 +7,7 @@ Generate a random number
 ## Installation
 
 ```
-bower install --save random-number
+bower install --save ebabel-eu/random-number
 ```
 
 ## Usage
@@ -42,7 +42,9 @@ The parameter min and max are integers. min is included but max is not.
 
 ## History
 
-1.0.0 is the first release
+- 1.0.1 is a small fix to the documentation
+- 1.0.0 is the first official release
+- 0.1.3 is a pre-release that full works but wasn't ready for webcomponents.org
 
 ## License
 
