@@ -1,16 +1,35 @@
 {
   "name": "random-number",
+  "version": "0.1.0",
   "description": "Generate a random number",
+  "authors": [
+    "Nadjib Amar"
+  ],
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer",
+    "random",
+    "number",
+    "game"
+  ],
   "main": "random-number.html",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ebabel-eu/random-number.git"
+  },
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/ebabel-eu/random-number",
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0"
+    "polymer": "Polymer/polymer#2.0.0"
   },
   "devDependencies": {
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
-    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#1.0.0"
   },
   "resolutions": {
-    "polymer": "^2.0.0"
+    "polymer": "2.0.0"
   }
 }
