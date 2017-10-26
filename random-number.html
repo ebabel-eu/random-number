@@ -1,15 +1,6 @@
-<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
 
 <dom-module id="random-number">
-  <template>
-    <style>
-      :host {
-        display: block;
-      }
-    </style>
-    <h2>Hello [[prop1]]!</h2>
-  </template>
-
   <script>
     /**
      * `random-number`
@@ -21,15 +12,9 @@
      */
     class RandomNumber extends Polymer.Element {
       static get is() { return 'random-number'; }
-      static get properties() {
-        return {
-          prop1: {
-            type: String,
-            value: 'random-number'
-          }
-        };
-      }
     }
+
+    const randomNumber = (max, min = 0) => Math.floor(Math.random() * (max - min)) + min;
 
     window.customElements.define(RandomNumber.is, RandomNumber);
   </script>
