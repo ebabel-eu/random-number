@@ -3,15 +3,16 @@
 <dom-module id="random-number">
   <template>
     <p>The &lt;random-number&gt; component does not produce a visual template.</p>
-    <p>Call randomNumber(max) to get a random number between 0 and max.</p>
+    <p>Call randomNumber(max) to get a random number between 0 and max (max is not included).</p>
     <p>Call randomNumber(max, min) to get a random number between min and max.</p>
-    <p>The parameter min and max are integers and are included in the possible random values.</p>
+    <p>The parameter min and max are integers. min is included but max is not.</p>
   </template>
   <script>
     /**
      * `random-number`
-     * Generate a random integer number
-     *
+     * Returns a random integer number from 0 to max or from min to max (max is non-inclusive)
+     * max: Number
+     * min?: Number
      * @customElement
      * @polymer
      * @demo demo/index.html
@@ -20,7 +21,7 @@
       static get is() { return 'random-number'; }
     }
 
-    const randomNumber = (max, min = 0) => Math.floor(Math.random() * (max - min)) + min + 1;
+    const randomNumber = (max, min = 0) => Math.floor(Math.random() * (max - min)) + min;
 
     window.customElements.define(RandomNumber.is, RandomNumber);
   </script>
