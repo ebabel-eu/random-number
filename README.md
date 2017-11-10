@@ -12,25 +12,23 @@ bower install --save ebabel-eu/random-number
 
 ## Usage
 
-This component does not produce a visual template.
-
-Call randomNumber(max) to get a random number between 0 and max (max is not included).
-
-Example below sets result to be a number from 0 to 9.
-
 ```
-const result = randomNumber(10);
+<random-number id="randomGenerator"></random-number>
 ```
 
-Call randomNumber(max, min) to get a random number between min and max.
+This component does not produce a visible template.
 
-Example below sets result to be a number from 1 to 12.
+In a script where random-number instance is accessible, call its function randomNumber:
 
 ```
-const result = randomNumber(13, 1);
+// returns a number from 0 to 9.
+const result = this.$.randomGenerator.randomNumber(10);
+
+// returns a number from 1 to 6.
+const dice = this.$.randomGenerator.randomNumber(7, 1);
 ```
 
-The parameter min and max are integers. min is included but max is not.
+The parameters max and min are integers. max is not included, min is.
 
 ## Contributing
 
@@ -42,9 +40,10 @@ The parameter min and max are integers. min is included but max is not.
 
 ## History
 
-- 1.0.1 is a small fix to the documentation
-- 1.0.0 is the first official release
-- 0.1.3 is a pre-release that full works but wasn't ready for webcomponents.org
+* **2.0.0:** randomNumber moved from global namespace to public method of each component
+* **1.0.1:** small fix to the documentation
+* **1.0.0:** first official release
+* **0.1.3:** pre-release that full works but wasn't ready for webcomponents.org
 
 ## License
 
