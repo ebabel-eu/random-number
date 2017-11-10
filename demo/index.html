@@ -22,7 +22,19 @@
       <h3>Basic random-number demo</h3>
       <demo-snippet>
         <template>
-          <random-number></random-number>
+          <random-number id="randomGenerator"></random-number>
+
+          <!--
+            In a script where random-number instance is accessible, call its function randomNumber:
+
+            // returns a number from 0 to 9.
+            const result = this.$.randomGenerator.randomNumber(10);
+
+            // returns a number from 1 to 6.
+            const dice = this.$.randomGenerator.randomNumber(7, 1);
+
+            The parameters max and min are integers. max is not included, min is.
+          -->
         </template>
       </demo-snippet>
     </div>

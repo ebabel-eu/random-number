@@ -1,12 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html">
 
 <dom-module id="random-number">
-  <template>
-    <p>The &lt;random-number&gt; component does not produce a visual template.</p>
-    <p>Call randomNumber(max) to get a random number between 0 and max (max is not included).</p>
-    <p>Call randomNumber(max, min) to get a random number between min and max.</p>
-    <p>The parameter min and max are integers. min is included but max is not.</p>
-  </template>
   <script>
     /**
      * `random-number`
@@ -19,9 +13,11 @@
      */
     class RandomNumber extends Polymer.Element {
       static get is() { return 'random-number'; }
-    }
 
-    const randomNumber = (max, min = 0) => Math.floor(Math.random() * (max - min)) + min;
+      randomNumber(max, min = 0) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+    }
 
     window.customElements.define(RandomNumber.is, RandomNumber);
   </script>
